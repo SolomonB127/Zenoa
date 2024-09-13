@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zenoa/Pages/home_page.dart';
+import 'package:zenoa/themes/themes.dart';
 
 import 'Pages/intro_page.dart';
 
@@ -11,11 +13,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: IntroPage(),
-      ),
+      home: const IntroPage(),
+      theme: lightmode,
+      routes: {'/homepage': (context) => const HomePage()},
     );
   }
 }
