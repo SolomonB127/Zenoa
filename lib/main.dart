@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zenoa/Pages/cart_page.dart';
 import 'package:zenoa/Pages/home_page.dart';
 import 'package:zenoa/themes/themes.dart';
 
@@ -19,7 +20,7 @@ class MainApp extends StatelessWidget {
       theme: lightmode,
       routes: {
         '/homepage': (context) => const HomePage(),
-        '/cartpage': (context) => const HomePage(),
+        '/cartpage': (context) => const CartPage(),
         },
     );
   }
