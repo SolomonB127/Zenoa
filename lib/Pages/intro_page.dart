@@ -7,6 +7,9 @@ class IntroPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.surface,
         body: Center(
@@ -14,14 +17,14 @@ class IntroPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               // logo
-              Icon(
-                Icons.shopping_bag,
-                size: 72,
+              Image.asset(
+                'assets/Images/Zenoa_logo.png',
+                width: screenWidth * 0.5,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
 
-              const SizedBox(
-                height: 25,
+              SizedBox(
+                height: screenHeight * 0.05,
               ),
 
               // title
