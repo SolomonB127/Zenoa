@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zenoa/Components/drawer_tiles.dart';
+import 'package:zenoa/Pages/intro_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,6 +27,7 @@ class HomePage extends StatelessWidget {
                 },
                 icon: const Icon(Icons.menu))),
       ),
+      backgroundColor: Theme.of(context).colorScheme.surface,
       drawer: Drawer(
         backgroundColor: Theme.of(context).colorScheme.surface,
         child: Column(
@@ -57,7 +59,14 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 25.0),
               child: DrawerTiles(
-                  icon: Icons.exit_to_app, text: "Exit", onTap: () {}),
+                  icon: Icons.exit_to_app,
+                  text: "Exit",
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const IntroPage()));
+                  }),
             ),
           ],
         ),
