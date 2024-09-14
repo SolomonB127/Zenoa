@@ -17,7 +17,10 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const IntroPage(),
       theme: lightmode,
-      routes: {'/homepage': (context) => const HomePage()},
+      routes: {
+        '/homepage': (context) => const HomePage(),
+        '/cartpage': (context) => const HomePage(),
+        },
     );
   }
 }
