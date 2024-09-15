@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:zenoa/Pages/cart_page.dart';
 import 'package:zenoa/Pages/home_page.dart';
+import 'package:zenoa/models/shop.dart';
 import 'package:zenoa/themes/themes.dart';
 
 import 'Pages/intro_page.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => Shop(),
+    child: const MainApp(),
+  ));
 }
 
 class MainApp extends StatelessWidget {
@@ -22,7 +27,7 @@ class MainApp extends StatelessWidget {
         '/intropage': (context) => const IntroPage(),
         '/homepage': (context) => const HomePage(),
         '/cartpage': (context) => const CartPage(),
-        },
+      },
     );
   }
 }
