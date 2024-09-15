@@ -19,6 +19,7 @@ class MainApp extends StatelessWidget {
       home: const IntroPage(),
       theme: lightmode,
       routes: {
+        '/intropage': (context) => const IntroPage(),
         '/homepage': (context) => const HomePage(),
         '/cartpage': (context) => const CartPage(),
         },
