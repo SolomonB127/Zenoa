@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:zenoa/models/product.dart';
 
 class ProductTile extends StatelessWidget {
-  const ProductTile({super.key});
+  final Product product;
+
+  const ProductTile({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      child: Column(children: <Widget>[
+        // product image
+        const Icon(Icons.shopify),
+
+        // product name
+        Text(product.name),
+
+        // product description
+        Text(product.description),
+
+        // product price + add to cart button
+        Text(product.price.toStringAsFixed(2)),
+      ],),
+    );
   }
 }
