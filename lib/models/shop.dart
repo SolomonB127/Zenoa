@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:zenoa/models/product.dart';
 
-class Shop {
+class Shop extends ChangeNotifier {
   // products for sale
   final List<Product> _shop = [
     // product 2
@@ -53,10 +55,12 @@ class Shop {
   // add products to cart
   void addToCart(Product item) {
     _cart.add(item);
+    notifyListeners();
   }
 
   // remove products to cart
   void removeFromCart(Product item) {
     _cart.remove(item);
+    notifyListeners();
   }
 }
