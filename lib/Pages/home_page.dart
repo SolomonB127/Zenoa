@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zenoa/Components/drawer_tiles.dart';
-import 'package:zenoa/Pages/intro_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -62,10 +61,8 @@ class HomePage extends StatelessWidget {
                   icon: Icons.exit_to_app,
                   text: "Exit",
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const IntroPage()));
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/intropage', (route) => false);
                   }),
             ),
           ],
