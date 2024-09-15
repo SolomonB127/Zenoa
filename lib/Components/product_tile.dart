@@ -8,8 +8,8 @@ class ProductTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(children: <Widget>[
+    return Column(
+      children: <Widget>[
         // product image
         const Icon(Icons.shopify),
 
@@ -21,7 +21,7 @@ class ProductTile extends StatelessWidget {
 
         // product price + add to cart button
         Text(product.price.toStringAsFixed(2)),
-      ],),
+      ],
     );
   }
 }
