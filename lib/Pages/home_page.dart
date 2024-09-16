@@ -36,9 +36,15 @@ class HomePage extends StatelessWidget {
       // List of Products
       body: ListView(
         children: <Widget>[
-          // title
-          const Text("SHOP"),
+          const SizedBox(
+            height: 25.0,
+          ),
           // subtitle
+          Center(
+              child: Text(
+                  "Pick from selected list of premium and quality products",
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary))),
 
           // product list
           SizedBox(
