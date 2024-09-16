@@ -15,16 +15,53 @@ class ProductTile extends StatelessWidget {
       ),
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(25),
+      width: 300,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          // product image
-          const Icon(Icons.shopify),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              // product image
+              AspectRatio(
+                aspectRatio: 1,
+                child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Theme.of(context).colorScheme.secondary),
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(25),
+                    child: const Icon(Icons.shopify)),
+              ),
 
-          // product name
-          Text(product.name),
+              const SizedBox(
+                height: 25,
+              ),
 
-          // product description
-          Text(product.description),
+              // product name
+              Text(
+                product.name,
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+
+              // product description
+              Text(
+                product.description,
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.inversePrimary),
+              ),
+            ],
+          ),
+
+          const SizedBox(
+            height: 25,
+          ),
 
           // product price + add to cart button
           Text(product.price.toStringAsFixed(2)),
