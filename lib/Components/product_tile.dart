@@ -1,10 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:zenoa/models/product.dart';
+import 'package:zenoa/models/shop.dart';
 
 class ProductTile extends StatelessWidget {
   final Product product;
 
   const ProductTile({super.key, required this.product});
+
+  // add to cart omPressed
+  void addToCart(BuildContext context) {
+    // show dialog box to confirm addition
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+                content: const Text("Do you want to add to cart?"),
+                actions: <Widget>[
+                  // cancel button
+                  MaterialButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text("Cancel")),
+
+                  // add to cart
+                  MaterialButton(
+                      onPressed: () {
+                        // pop the box
+                        Navigator.pop(context);
+
+                        // Navigate to cart
+                        context.read<Shop>().addToCart(product);
+                      },
+                      child: const Text("Yes")),
+                ]));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +92,22 @@ class ProductTile extends StatelessWidget {
           ),
 
           // product price + add to cart button
-          Text(product.price.toStringAsFixed(2)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              // Product price
+              Text('\$${product.price.toStringAsFixed(2)}'),
+
+              // add to cart button
+              Container(
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.secondary,
+                      borderRadius: BorderRadius.circular(12)),
+                  child: IconButton(
+                      onPressed: () => addToCart(context),
+                      icon: const Icon(Icons.add)))
+            ],
+          ),
         ],
       ),
     );
