@@ -62,20 +62,24 @@ class CartPage extends StatelessWidget {
         body: Column(children: <Widget>[
           // cart list
           Expanded(
-              child: ListView.builder(
-                  itemCount: cart.length,
-                  itemBuilder: (context, index) {
-                    // get individual items
-                    final item = cart[index];
-                    // return as cart list
-                    return ListTile(
-                      title: Text(item.name),
-                      subtitle: Text(item.price.toStringAsFixed(2)),
-                      trailing: IconButton(
-                          onPressed: () => removeItemFromCart(context, item),
-                          icon: const Icon(Icons.delete)),
-                    );
-                  })),
+              child: Center(
+            child: cart.isEmpty
+                ? const Text("Your cart is Empty!")
+                : ListView.builder(
+                    itemCount: cart.length,
+                    itemBuilder: (context, index) {
+                      // get individual items
+                      final item = cart[index];
+                      // return as cart list
+                      return ListTile(
+                        title: Text(item.name),
+                        subtitle: Text(item.price.toStringAsFixed(2)),
+                        trailing: IconButton(
+                            onPressed: () => removeItemFromCart(context, item),
+                            icon: const Icon(Icons.delete)),
+                      );
+                    }),
+          )),
 
           // pay btn
           Padding(
