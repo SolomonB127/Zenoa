@@ -42,7 +42,7 @@ class IntroPage extends StatelessWidget {
               const SizedBox(
                 height: 10.0,
               ),
-              NextButton(
+              MyButton(
                   onTap: () {
                     Navigator.pushNamed(context, "/homepage");
                   },
