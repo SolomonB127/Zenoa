@@ -16,6 +16,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
+        actions: <Widget>[
+          // go to cart page
+          IconButton(
+              onPressed: () => Navigator.pushNamed(context, "/cartpage"),
+              icon: const Icon(Icons.shopping_cart_outlined))
+        ],
         elevation: 0.0,
         title: Center(
             child: Text(
@@ -81,7 +87,7 @@ class HomePage extends StatelessWidget {
                     text: "Shop",
                     onTap: () => Navigator.pop(context)),
                 DrawerTiles(
-                    icon: Icons.trolley,
+                    icon: Icons.shopping_cart_outlined,
                     text: "Cart",
                     onTap: () {
                       // Pop drawer
