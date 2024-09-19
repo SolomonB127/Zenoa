@@ -60,7 +60,7 @@ class ProductTile extends StatelessWidget {
                         color: Theme.of(context).colorScheme.secondary),
                     width: double.infinity,
                     padding: const EdgeInsets.all(25),
-                    child: const Icon(Icons.shopify)),
+                    child: Image.asset(product.imgPath)),
               ),
 
               const SizedBox(
