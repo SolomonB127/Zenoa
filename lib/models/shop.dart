@@ -6,39 +6,45 @@ class Shop extends ChangeNotifier {
   final List<Product> _shop = [
     // product 2
     Product(
-        name: "Product 1",
+        name: "DualFlex Men's Jacket",
         price: 99.99,
-        description: "Item description",
+        description:
+            "Stylish and functional, this jacket features double pockets for convenience on any adventure.",
         imgPath: "assets/Images/2020-New-Double-Pockets-Men.jpg"),
     // product 2
     Product(
-        name: "Product 2",
+        name: "Akatsuki Cloud Hoodie",
         price: 99.99,
-        description: "Item description",
+        description:
+            "Show off your anime fandom with this cozy hoodie, inspired by iconic designs.",
         imgPath: "assets/Images/Akatuski.jpg"),
     // product 3
     Product(
-        name: "Product 3",
+        name: "Asta Adventure Hoodie",
         price: 99.99,
-        description: "Item description",
+        description:
+            "Capture the spirit of Black Clover with this comfortable hoodie, perfect for daring fans.",
         imgPath: "assets/Images/Asta.jpg"),
     // product 4
     Product(
-        name: "Product 4",
+        name: "Storek Sneakers",
         price: 99.99,
-        description: "Item description",
+        description:
+            "Sleek and supportive, these sneakers are designed for style and versatility.",
         imgPath: "assets/Images/daniel-storek-JM-qKEd1GMI-unsplash.jpg"),
     // product 5
     Product(
-        name: "Product 5",
+        name: "G-Shock Classic Watch",
         price: 99.99,
-        description: "Item description",
+        description:
+            "Durable and stylish, this watch is ideal for any setting, from outdoor to office.",
         imgPath: "assets/Images/Gshock.jpg"),
     // product 6
     Product(
-        name: "Product 6",
+        name: "Liebe Tee",
         price: 99.99,
-        description: "Item description",
+        description:
+            "Celebrate Black Clover with this comfortable tee, featuring Liebe's picture prominently.",
         imgPath: "assets/Images/White.jpg"),
   ];
 
