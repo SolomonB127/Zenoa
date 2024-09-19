@@ -72,8 +72,9 @@ class CartPage extends StatelessWidget {
                       final item = cart[index];
                       // return as cart list
                       return ListTile(
+                        leading: Image.asset(item.imgPath),
                         title: Text(item.name),
-                        subtitle: Text(item.price.toStringAsFixed(2)),
+                        subtitle: Text("\$${item.price.toStringAsFixed(2)}"),
                         trailing: IconButton(
                             onPressed: () => removeItemFromCart(context, item),
                             icon: const Icon(Icons.delete)),
