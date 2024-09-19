@@ -9,37 +9,37 @@ class Shop extends ChangeNotifier {
         name: "Product 1",
         price: 99.99,
         description: "Item description",
-        imgPath: "imgPath"),
+        imgPath: "assets/Images/2020-New-Double-Pockets-Men.jpg"),
     // product 2
     Product(
         name: "Product 2",
         price: 99.99,
         description: "Item description",
-        imgPath: "imgPath"),
+        imgPath: "assets/Images/Akatuski.jpg"),
     // product 3
     Product(
         name: "Product 3",
         price: 99.99,
         description: "Item description",
-        imgPath: "imgPath"),
+        imgPath: "assets/Images/Asta.jpg"),
     // product 4
     Product(
         name: "Product 4",
         price: 99.99,
         description: "Item description",
-        imgPath: "imgPath"),
+        imgPath: "assets/Images/daniel-storek-JM-qKEd1GMI-unsplash.jpg"),
     // product 5
     Product(
         name: "Product 5",
         price: 99.99,
         description: "Item description",
-        imgPath: "imgPath"),
+        imgPath: "assets/Images/Gshock.jpg"),
     // product 6
     Product(
         name: "Product 6",
         price: 99.99,
         description: "Item description",
-        imgPath: "imgPath"),
+        imgPath: "assets/Images/White.jpg"),
   ];
 
   // user cart
