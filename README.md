@@ -23,7 +23,7 @@ Zenoa is a Flutter application providing a minimalistic shopping experience. Thi
 
 # Installation
 ```
-git clone https://github.com/yourusername/zenoa.git
+git clone https://github.com/SolomonB127/zenoa.git
 cd zenoa
 flutter pub get
 flutter run
